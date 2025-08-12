@@ -5,7 +5,7 @@ body {
     align-items: center;
     min-height: 100vh;
     margin: 0;
-    background: linear-gradient(to bottom, #ffebee, #f8bbd0); /* Zachte roze-rode gradient */
+    background: linear-gradient(to bottom, #ffebee, #f8bbd0);
     color: #333;
     text-align: center;
     overflow: hidden;
@@ -133,34 +133,30 @@ button:hover {
     }
 }
 
-/* Geanimeerde kat stijl - Gecorrigeerd */
-#kat-animatie {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 300px;
-    height: 300px;
-    z-index: 5;
-    /* De animatie wordt door JS geladen */
-}
+/* De container voor de Lottie-animatie van de kat */
+#kat-animatie { position: fixed; bottom: 0; left: 0; width: 300px; height: 300px; z-index: 5; /* De animatie wordt door JS geladen */ }
 
-@keyframes beweegKat {
-    0% {
-        transform: translateX(-15vw);
+/* Media Query voor kleinere schermen (bijv. mobiele telefoons) */
+@media (max-width: 600px) {
+    .container {
+        padding: 1.5rem; /* Minder padding op kleine schermen */
     }
-    25% {
-        transform: translateX(30vw) scaleX(1);
+
+    .titel {
+        font-size: 2rem; /* Kleinere titel */
     }
-    50% {
-        transform: translateX(60vw) scaleX(1);
+
+    .ondertitel {
+        font-size: 1rem; /* Kleinere ondertitel */
     }
-    51% {
-        transform: translateX(60vw) scaleX(-1);
+
+    button {
+        padding: 12px 25px; /* Kleinere knop */
+        font-size: 1rem;
     }
-    75% {
-        transform: translateX(30vw) scaleX(-1);
-    }
-    100% {
-        transform: translateX(-15vw) scaleX(-1);
+
+    #kat-animatie {
+        width: 100px; /* Kleinere kat */
+        height: 100px;
     }
 }
