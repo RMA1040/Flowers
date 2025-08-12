@@ -40,7 +40,42 @@ body {
     margin-bottom: 2rem;
 }
 
-button {
+/* Styling voor de nieuwe Pomodoro-timer */
+.pomodoro-timer {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+#timer-display {
+    font-size: 4rem;
+    font-weight: bold;
+    color: #d81b60;
+    margin-bottom: 1rem;
+}
+
+.timer-controls button {
+    background-color: #d81b60;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 25px;
+    cursor: pointer;
+    margin: 0 5px;
+    transition: background-color 0.3s ease;
+}
+
+.timer-controls button:hover {
+    background-color: #ad1457;
+}
+
+#timer-status {
+    font-style: italic;
+    margin-top: 1rem;
+    color: #757575;
+}
+
+button#onthulKnop {
     background-color: #d81b60;
     color: white;
     border: none;
@@ -52,7 +87,7 @@ button {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
-button:hover {
+button#onthulKnop:hover {
     background-color: #ad1457;
     transform: translateY(-3px) scale(1.05);
 }
@@ -136,27 +171,37 @@ button:hover {
 /* De container voor de Lottie-animatie van de kat */
 #kat-animatie { position: fixed; bottom: 0; left: 0; width: 300px; height: 300px; z-index: 5; /* De animatie wordt door JS geladen */ }
 
+
 /* Media Query voor kleinere schermen (bijv. mobiele telefoons) */
 @media (max-width: 600px) {
     .container {
-        padding: 1.5rem; /* Minder padding op kleine schermen */
+        padding: 1.5rem;
     }
 
     .titel {
-        font-size: 2rem; /* Kleinere titel */
+        font-size: 2rem;
     }
 
     .ondertitel {
-        font-size: 1rem; /* Kleinere ondertitel */
+        font-size: 1rem;
     }
 
-    button {
-        padding: 12px 25px; /* Kleinere knop */
+    .timer-controls button {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+
+    #timer-display {
+        font-size: 3rem;
+    }
+
+    button#onthulKnop {
+        padding: 12px 25px;
         font-size: 1rem;
     }
 
     #kat-animatie {
-        width: 100px; /* Kleinere kat */
+        width: 100px;
         height: 100px;
     }
 }
